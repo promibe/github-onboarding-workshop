@@ -1,51 +1,45 @@
-# My Notes — [REPLACE WITH YOUR FULL NAME]
-
-> **How to use this file:**
-> 1. **Download** this file to your computer — click the **Raw** button on GitHub, then right-click and *Save As*, OR click the download icon at the top-right of the file view
-> 2. **Rename** the downloaded file — replace `yourname` with your actual first and last name in lowercase, separated by hyphens, e.g. `microsoft-entra-oyimafu-emmanuel.md`
-> 3. **Open** the renamed file in any text editor (Notepad, VS Code, TextEdit) and fill in your notes below
-> 4. **Upload** your file to GitHub — go into this session folder on your forked repo, click **Add file → Upload files**, drag in your completed file, then click **Commit changes**
-> 5. **Open a Pull Request** back to the main repo — the facilitator will review your notes before merging
-
----
+# My Notes — Obinabo Ogochukwu Cecilia 
 
 ## Key Concepts I Learned
 
-<!-- Write the main ideas covered in today's session -->
+<!-- Write the main ideas covered in today' session -->
 
--
--
--
-
----
+- The importance of being punctual for every meeting, as late coming is not allowed.
+- How to create a GitHub account for submitting assignments.
+- How to create a GitHub repository.
+- How to fork a repository, which is necessary before uploading files.
+- How to commit changes, which is an important step in submitting assignments.
+- How to properly submit assignments using GitHub.
 
 ## Lab / Hands-On Work
 
 <!-- Describe what you did in the lab. Include steps, commands, or screenshots descriptions -->
 
 ### What I did
-
+- created my github account/profile
+- created my repository 
+- forked my repository 
 
 ### What happened / Result
-
+- All the tasks was completed successfully.
 
 ### Challenges I faced
 
 
----
+--- I experienced some difficulty adding the downloaded class file because my phone was not displaying all the required icons. Despite this challenge, I was able to complete the exercise successfully.
 
 ## My Takeaways
 
 <!-- What was most valuable to you personally from this session? -->
 
 
----
+--- Successfully learned how to set up a Github account/profile.
 
 ## Questions I Still Have
 
 <!-- Anything you want to follow up on or ask the mentor -->
 
--
+- 
 -
 
 ---
@@ -58,4 +52,4 @@
 
 ---
 
-*Submitted by: [Your Full Name] · [Your GitHub username]*
+*Submitted by: Obinabo Ogochukwu Cecilia · Ogochukwucecila*
