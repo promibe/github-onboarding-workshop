@@ -3,32 +3,69 @@
 ## Key Concepts I Learned
 
 Azure Key Vaults & Defense-in-Depth
-Secure Secret Management: Storing sensitive credentials, connection strings, and keys in Azure Key Vault is a fundamental requirement for defense-in-depth, preventing single-point-of-compromise scenarios where one exposed secret escalates into a full workload breach.
+* During this class, I gained a better understanding of how Azure Key Vault strengthens security by providing a centralized location for storing and managing sensitive information.
 
-Proactive Security: Implementing automated key rotation, centralized secret versioning, and anomaly monitoring via Microsoft Defender for Cloud significantly reduces the attack surface.
-Certificate Integration: Integrated Key Vault certificates can be provisioned through partnered Certificate Authorities (specifically DigiCert and GlobalSign), which requires maintaining external accounts alongside Microsoft resources.
+* I learned that Azure Key Vault is the recommended service for securely storing secrets, encryption keys, and certificates instead of embedding them in applications or configuration files.
 
-Authorization Methods: Azure RBAC vs. Legacy Access Policies
-Azure RBAC (Recommended): Utilizes a unified, modern authorization model across the Azure ecosystem. RBAC role assignments are highly granular, fully auditable, restricted to specific scopes, and integrate seamlessly with Azure Managed Identities.
-Legacy Access Policies: Uses a segregated, vault-specific permission model. This approach is highly prone to configuration drift over time and lack of uniformity, though it remains visible in legacy environments.
+* I also learned about the importance of key rotation, centralized secret versioning, and monitoring suspicious access patterns with Microsoft Defender. These practices help reduce the risk of compromised credentials and improve an organization's overall security posture.
 
-Core Key Vault Assets
-Key Vault manages three distinct secure asset types:
-1. Secrets: Plaintext configuration strings, database connection strings, passwords, and API keys.
-2. Keys: Cryptographic keys utilized directly for encryption, decryption, and digital signing operations.
-3. Certificates: X.509 certificates alongside automated lifecycle management and renewal tools.
+* One important takeaway was understanding how the exposure of a single secret can potentially lead to the compromise of an entire workload if proper security controls are not in place.
 
-Managed Identities in Azure
-Azure utilizes managed identities to eliminate the need for hardcoded credentials, categorized into two types:
-1. System-Assigned: Automatically created and tightly coupled to a single, specific Azure resource. It is deleted automatically when the resource is destroyed.
-2. User-Assigned: Created as a standalone, reusable Azure resource that can be assigned to multiple independent services simultaneously.
+* For certificate management, Azure Key Vault can integrate with DigiCert and GlobalSign for certificate issuance and lifecycle management. However, an organization must maintain a separate account with either provider, as these services are not automatically included with Microsoft Azure.
 
-Data Protection & Network Security Controls
-To safeguard Key Vault data from both unauthorized exfiltration and accidental deletion, three primary layers of defense are enforced:
-1. Firewalls & Network Access Control: Restricting public endpoints to specific virtual networks (VNets) or utilizing private endpoints to isolate traffic.
-2. Soft-Delete & Purge Protection: Safeguarding against accidental or malicious deletions. Soft-delete retains deleted vaults for a specified window, while purge protection prevents permanent deletion of those vaults during that period.
-3. Operational Guardrails: Applying administrative locks and governance policies to prevent unauthorized configuration changes.
--
+Azure Key Vault Authorization Models
+I learned that Azure Key Vault supports two authorization planes:
+1. Control Plane – Used to manage the Key Vault resource itself (creation, configuration, deletion, and access management).
+2. Data Plane – Used to access the data stored inside the vault, such as secrets, keys, and certificates.
+   
+Azure RBAC (Role-Based Access Control)
+Azure RBAC is the modern and recommended authorization model for Azure Key Vault because it:
+1. Provides a unified access management model across Azure resources.
+2. Supports scoped and auditable role assignments.
+3. Integrates seamlessly with managed identities.
+4. Simplifies access management compared to older permission models.
+   
+Legacy Access Policies
+I also learned about Legacy Access Policies, which:
+1. Use a separate permission model for each Key Vault.
+2. Can introduce policy drift over time due to inconsistent configurations.
+3. Are still available in many existing Azure environments but are gradually being replaced by Azure RBAC.
+
+Core Components of Azure Key Vault
+Azure Key Vault is designed to manage three primary types of sensitive assets:
+1. Secrets
+-Used to securely store sensitive information such as:
+
+2. Passwords
+-API keys
+-Connection strings
+
+3. Keys
+-Used for cryptographic operations, including:
+a. Encryption
+b. Decryption
+c. Digital signing
+
+3. Certificates
+-Used to manage X.509 certificates and support their issuance, storage, and renewal throughout their lifecycle.
+
+Managed Identities
+I learned about the two types of managed identities available in Azure:
+-System-Assigned Managed Identity
+*Created and enabled directly on an Azure resource.
+*The identity has the same lifecycle as the resource.
+*Intended for use by a single Azure resource.
+
+-User-Assigned Managed Identity
+*Created as an independent Azure resource.
+*Can be assigned to multiple Azure resources.
+*Enables identity reuse across different services and workloads.
+*Data Protection and Network Security Controls
+
+I also learned about several security features that help protect Azure Key Vault:
+1. Firewall and Network Access – Restricts access to the Key Vault using network rules and private connectivity.
+2. Soft Delete and Purge Protection – Prevents accidental or malicious deletion of vault contents by allowing recovery and protecting against permanent removal.
+3. Operational Guard Rails – Provides built-in safeguards and governance features that help maintain secure configurations and reduce operational risks.
 -
 -
 
